@@ -9,6 +9,11 @@ const Home: NextPage = () => {
         <Headers />
         <div className="p-4">
           <p>Hello There, Welcome to my humble place.</p>
+          <div className="">
+            <Link href="/nav">
+              <a className="text-blue-500">Link to github repo</a>
+            </Link>
+          </div>
           <p>
             Here is a list of components I am working on (mostly base on
             tailwindCSS):

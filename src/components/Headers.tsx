@@ -18,6 +18,8 @@ import {
 } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
+import { useEffect } from "react";
+import { themeChange } from "theme-change";
 
 const solutions = [
   {
@@ -101,6 +103,10 @@ function classNames(...classes: string[]) {
 }
 
 export default function Example() {
+  useEffect(() => {
+    themeChange(false);
+    // 👆 false parameter is required for react project
+  }, []);
   return (
     <Popover className="relative z-10 bg-white">
       <div className="mx-auto">
@@ -211,7 +217,6 @@ export default function Example() {
             >
               Docs
             </a>
-
             <Popover className="relative">
               {({ open }) => (
                 <>
@@ -301,6 +306,10 @@ export default function Example() {
                 </>
               )}
             </Popover>
+            {/* <select data-choose-theme>
+              <option value="light">Light</option>
+              <option value="dark">Dark</option>
+            </select> */}
           </Popover.Group>
           <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
             <a
