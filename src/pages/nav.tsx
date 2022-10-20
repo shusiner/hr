@@ -1,24 +1,19 @@
 import type { NextPage } from "next";
-import Head from "next/head";
 import Headers from "../components/Headers";
+import Headers1 from "../components/nav/Headers1";
 
 const Home: NextPage = () => {
   return (
     <>
       <Headers />
       <main className="container mx-auto flex min-h-screen flex-col px-6 py-4">
-        <p>Hello There, Welcome to my humble place.</p>
-        <p>
-          Here is a list of components I am working on (mostly base on
-          tailwindCSS):
-        </p>
-        <ul className="list-disc">
-          <li>
-            <a href="/nav" className="text-blue-500">
-              Top nav bar
-            </a>
-          </li>
-        </ul>
+        <div className="border-blue-500">
+          <a href="/" className="text-blue-500">
+            Home
+          </a>
+          <h1>Nav 1</h1>
+          <Headers1 />
+        </div>
       </main>
     </>
   );
